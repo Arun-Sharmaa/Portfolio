@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+/* section {
+  overflow: hidden;
+  white-space: wrap;
+  word-break: break-word;
+} */
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+#navbar {
+  background-color: #45474b;
+}
+
+#intro {
+  background-color: #f5f7f8;
+  color: #45474b;
+}
+
+span {
+  background-image: radial-gradient(circle, #f4ce14, #e3c224, #d3b62e, #c3ab35, #b39f3b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  color: #f5f7f8;
+  list-style: none;
+  padding: 0 6rem;
+}
+
+.li-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.li-container li a {
+  text-decoration: none;
+  color: #f5f7f8;
+}
+
+.item1 {
+  padding: 0 10px;
+}
+
+.intro-wrapper {
+  background-color: #f5f7f8;
+  height: 92vh;
+  display: flex;
+}
+
+.introduction {
+  margin: 5.5rem 25rem 5.5rem 6rem;
+  padding: 0%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f5f7f8;
+}
+
+.intro-paragraph1 {
+  font-size: 1rem;
+  margin: 0 0 20px 0;
+}
+
+.intro-h1 {
+  text-transform: uppercase;
+  font-size: clamp(30px, 8vw, 80px);
+  font-weight: 900;
+  position: relative;
+  margin-top: 0;
+}
+
+#intro .introduction .intro-h1::after {
+  content: "Arun Sharma";
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  font-size: clamp(30px, 8vw, 80px);
+  color: transparent;
+  -webkit-text-stroke: 0.5px #45474b;
+  transform: scale(1);
+  z-index: 5;
+  opacity: 0.5;
+  font-weight: 900;
+}
+
+.intro-h5 {
+  font-size: clamp(18px, 3vw, 80px);
+  font-weight: 800;
+  margin: 0 0 20px 0;
+}
+
+.intro-paragraph2 {
+  line-height: 2.5rem;
+  margin: 0 0 20px 0;
+}
+
+button {
+  max-width: 120px;
+  width: 120px;
+  height: 50px;
+  font-weight: 800;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  background-color: #495e57;
+  color: #f5f7f8;
+  --border-radius: 8px;
+  --border-width: 4px;
+  appearance: none;
+  position: relative;
+
+  border: 0;
+
+  z-index: 2;
+}
+button::after {
+  --m-i: linear-gradient(#000, #000);
+  --m-o: content-box, padding-box;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background-image: conic-gradient(#488cfb, #29dbbc, #ddf505, #ff9f0e, #e440bb, #655adc, #488cfb);
+  -webkit-mask-image: var(--m-i), var(--m-i);
+  mask-image: var(--m-i), var(--m-i);
+  -webkit-mask-origin: var(--m-o);
+  mask-origin: var(--m-o);
+  -webkit-mask-clip: var(--m-o);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  filter: hue-rotate(0);
+  animation: rotate-hue linear 500ms infinite;
+  animation-play-state: paused;
+}
+
+button:hover::after {
+  animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+  to {
+    filter: hue-rotate(1turn);
+  }
+}
+
+button,
+button::after {
+  box-sizing: border-box;
+}
+
+button:active {
+  --border-width: 5px;
+}
+
+@media screen and (max-width: 1094px) and (min-width: 768px) {
+  .introduction {
+    margin: 1rem 3rem 1rem 3rem;
+    transition: all 0.2s linear;
+  }
+
+  .intro-paragraph1 {
+    text-align: center;
+    font-size: 1.5rem;
+    transition: all 0.2s linear;
+  }
+
+  .intro-h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: clamp(30px, 11vw, 80px);
+    transition: all 0.2s linear;
+  }
+
+  #intro .introdu2tion .intro-h1::after {
+    font-size: clamp(30px, 11vw, 80px);
+    top: -15px;
+    left: -9px;
+    transition: all 0.2s linear;
+  }
+
+  .intro-h5 {
+    font-size: clamp(18px, 5vw, 80px);
+    transition: all 0.1s;
+  }
+
+  .intro-paragraph2 {
+    line-height: 2.5rem;
+    transition: all 0.2s linear;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  button {
+    max-width: 10rem;
+    width: 10rem;
+    height: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    transition: all 0.2s linear;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .introduction {
+    margin: 1rem 1rem 1rem 1rem;
+  }
+
+  .intro-paragraph1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .intro-h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: clamp(30px, 12vw, 80px);
+  }
+
+  #intro .introduction .intro-h1::after {
+    font-size: clamp(30px, 11vw, 80px);
+    top: -15px;
+    left: -6px;
+  }
+
+  .intro-h5 {
+    font-size: clamp(18px, 4vw, 80px);
+    font-weight: 800;
+    margin: 1rem auto 0rem auto;
+  }
+
+  .intro-paragraph2 {
+    line-height: 2.5rem;
+    margin: 14px auto;
+    text-align: center;
+  }
+  button {
+    text-align: center;
+    font-size: 1rem;
+    margin: 19px auto -34px;
+  }
+}
