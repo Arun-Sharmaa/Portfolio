@@ -39,13 +39,14 @@ span {
   padding: 0 6rem;
 }
 
-.li-container {
+.navbar-container2 {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  gap: 20px;
 }
 
-.li-container li a {
+.item1 a {
   text-decoration: none;
   color: #f5f7f8;
 }
