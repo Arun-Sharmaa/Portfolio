@@ -1,64 +1,129 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-
+/* --------------------Root ELements--------------------  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
-/* section {
+section {
   overflow: hidden;
   white-space: wrap;
   word-break: break-word;
-} */
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
 
 body {
   font-family: "Poppins", sans-serif;
 }
-#navbar {
-  background-color: #45474b;
-}
 
-#intro {
-  background-color: #f5f7f8;
-  color: #45474b;
+:root {
+  --bg-color: #f5f7f8;
+  --color: #45474b;
+  --color2: #495e57;
+  --highlight: #f4ce14;
 }
+/* --------------------Root ELements-------------------- */
 
-span {
-  background-image: radial-gradient(circle, #f4ce14, #e3c224, #d3b62e, #c3ab35, #b39f3b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+/*------------------Navbar START-------------------*/
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8vh;
-  color: #f5f7f8;
-  list-style: none;
-  padding: 0 6rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--color);
+}
+.hamburger {
+  display: none;
 }
 
-.navbar-container2 {
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--bg-color);
+}
+.nav-menu {
   display: flex;
   justify-content: space-between;
-  align-content: center;
-  gap: 20px;
+  align-items: center;
 }
 
-.item1 a {
-  text-decoration: none;
-  color: #f5f7f8;
+.nav-item {
+  margin-left: 1rem;
 }
 
-.item1 {
-  padding: 0 10px;
+.nav-link {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--bg-color);
 }
+
+.nav-link:hover {
+  color: var(--highlight);
+}
+
+.nav-logo {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bg-color);
+}
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    z-index: 200;
+    right: -100%;
+    top: 4rem;
+    flex-direction: column;
+    background-color: var(--color);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-item {
+    margin: 2rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+/*------------------Navbar END-------------------*/
+
+/*------------------Intro START-------------------*/
 
 .intro-wrapper {
-  background-color: #f5f7f8;
+  background-color: var(--bg-color);
   height: 92vh;
   display: flex;
+  color: var(--color);
 }
 
 .intro-container {
@@ -68,7 +133,7 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f5f7f8;
+  background-color: var(--bg-color);
 }
 
 .intro-paragraph1 {
@@ -87,7 +152,7 @@ span {
 #intro .intro-container .intro-h1::after {
   content: "Arun Sharma";
   position: absolute;
-  top: -15px;
+  top: -13px;
   left: 0px;
   height: 100%;
   width: 100%;
@@ -104,6 +169,11 @@ span {
   font-size: clamp(18px, 3vw, 80px);
   font-weight: 800;
   margin: 0 0 20px 0;
+}
+.ideas {
+  background-image: radial-gradient(circle, #f4ce14, #e3c224, #d3b62e, #c3ab35, #b39f3b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .intro-paragraph2 {
@@ -122,15 +192,13 @@ button {
   text-align: center;
   text-decoration: none;
   font-size: 1rem;
-  background-color: #495e57;
-  color: #f5f7f8;
+  background-color: var(--color2);
+  color: var(--bg-color);
   --border-radius: 8px;
   --border-width: 4px;
   appearance: none;
   position: relative;
-
   border: 0;
-
   z-index: 2;
 }
 button::after {
@@ -189,10 +257,6 @@ button:active {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar-container {
-    margin-top: 10px;
-  }
-
   .intro-container {
     margin: 1rem 1rem 3rem 1rem;
   }
@@ -213,3 +277,5 @@ button:active {
     font-size: clamp(25px, 5vw, 80px);
   }
 }
+
+/*------------------Intro END-------------------*/
