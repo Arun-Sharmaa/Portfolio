@@ -85,7 +85,8 @@ body {
     top: 4rem;
     flex-direction: column;
     background-color: var(--color);
-    width: 100%;
+    width: 70%;
+    height: 100%;
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
