@@ -54,8 +54,8 @@ body {
 }
 .nav-menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0 43px;
+  align-items: start;
 }
 
 .nav-item {
@@ -82,10 +82,11 @@ body {
     position: fixed;
     z-index: 200;
     right: -100%;
-    top: 4rem;
+    top: 3.9rem;
     flex-direction: column;
     background-color: var(--color);
-    width: 100%;
+    width: 70%;
+    height: 100vh;
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
@@ -118,6 +119,12 @@ body {
 /*------------------Navbar END-------------------*/
 
 /*------------------Intro START-------------------*/
+
+/* #intro {
+  background-color: brown;
+  width: 100%;
+  height: 92.1vh;
+} */
 
 .intro-wrapper {
   background-color: var(--bg-color);
