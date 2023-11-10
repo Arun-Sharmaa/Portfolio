@@ -30,7 +30,7 @@ body {
 }
 /* --------------------Root ELements-------------------- */
 
-/*------------------Navbar START-------------------*/
+/*------------------Navbar-------------------*/
 
 .navbar-container {
   display: flex;
@@ -116,15 +116,15 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-/*------------------Navbar END-------------------*/
+/*------------------Navbar-------------------*/
 
-/*------------------Intro START-------------------*/
+/*------------------Intro-------------------*/
 
-/* #intro {
-  background-color: brown;
+#intro {
+  background-color: var(--bg-color);
   width: 100%;
-  height: 92.1vh;
-} */
+  height: 92vh;
+}
 
 .intro-wrapper {
   background-color: var(--bg-color);
@@ -285,4 +285,80 @@ button:active {
   }
 }
 
-/*------------------Intro END-------------------*/
+/*------------------Intro-------------------*/
+
+/*------------------About Me-------------------*/
+
+#about-me {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 92vh;
+}
+
+.am-wrapper {
+  background-color: var(--bg-color);
+  height: 92vh;
+  display: flex;
+  color: var(--color);
+}
+
+.am-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  margin: 9rem 25rem 9rem 6rem;
+  padding: 0%;
+  position: relative;
+}
+
+.am-paragraph1,
+.am-paragraph2 {
+  font-size: 1rem;
+  margin: 0 0 20px 0;
+  line-height: 2rem;
+  margin: 20px 0;
+}
+
+.am-h1 {
+  font-size: clamp(30px, 3.5vw, 80px);
+  font-weight: 900;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.am-h1::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: var(--color);
+  left: 300px;
+  bottom: 50%;
+  width: 750px;
+}
+@media screen and (max-width: 1364px) {
+  .am-container {
+    margin: 1rem 1rem 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 1094px) {
+  .am-container {
+    margin: 1rem 1rem 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .am-container {
+    margin: 1rem 1rem 1rem 1rem;
+  }
+
+  .am-h1 {
+    font-size: clamp(30px, 9vw, 80px);
+  }
+}
+
+/*------------------About Me-------------------*/
