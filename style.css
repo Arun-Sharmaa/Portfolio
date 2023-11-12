@@ -20,6 +20,7 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
+  text-align: left;
 }
 
 :root {
@@ -184,7 +185,7 @@ body {
 }
 
 .intro-paragraph2 {
-  line-height: 2rem;
+  line-height: 2.3rem;
   margin: 0 0 20px 0;
 }
 
@@ -316,12 +317,12 @@ button:active {
 .am-paragraph2 {
   font-size: 1rem;
   margin: 0 0 20px 0;
-  line-height: 2rem;
+  line-height: 2.3rem;
   margin: 20px 0;
 }
 
 .am-h1 {
-  font-size: clamp(30px, 3.5vw, 80px);
+  font-size: clamp(30px, 3.5rem, 80px);
   font-weight: 900;
   position: relative;
   margin-top: 0;
@@ -332,12 +333,11 @@ button:active {
   position: absolute;
   content: "";
   display: block;
-  width: 120px;
   height: 2px;
   background: var(--color);
   left: 300px;
   bottom: 50%;
-  width: 750px;
+  width: 46.875rem;
 }
 @media screen and (max-width: 1364px) {
   .am-container {
@@ -358,6 +358,15 @@ button:active {
 
   .am-h1 {
     font-size: clamp(30px, 9vw, 80px);
+  }
+
+  .am-h1::after {
+    left: 195px;
+    width: 11.5rem;
+  }
+  .am-paragraph1,
+  .am-paragraph2 {
+    margin-top: -240px;
   }
 }
 
