@@ -361,12 +361,12 @@ button:active {
   }
 
   .am-h1::after {
-    left: 195px;
-    width: 11.5rem;
+    left: 14.375rem;
+    width: 13.7rem;
   }
   .am-paragraph1,
   .am-paragraph2 {
-    margin-top: -240px;
+    margin-top: 1rem;
   }
 }
 
