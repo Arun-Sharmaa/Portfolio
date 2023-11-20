@@ -5,10 +5,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+}
+
 section {
   overflow: hidden;
   white-space: wrap;
 }
+
 li {
   list-style: none;
 }
@@ -17,17 +27,13 @@ a {
   text-decoration: none;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  text-align: left;
-}
-
 :root {
   --bg-color: #f5f7f8;
   --color: #45474b;
   --color2: #495e57;
   --highlight: #f4ce14;
 }
+
 /* --------------------Root ELements-------------------- */
 
 /*------------------Navbar-------------------*/
@@ -286,6 +292,28 @@ button:active {
   }
 }
 
+@media screen and (max-width: 412px) {
+  .intro-container {
+    margin: 1rem 1rem 1rem 1rem;
+  }
+
+  .intro-h1 {
+    font-size: clamp(7.5vw, 9vw, 10.5vw);
+  }
+
+  #intro .intro-container .intro-h1::after {
+    font-size: clamp(30px, 9vw, 80px);
+    top: -15px;
+    left: -1px;
+    transition: all 0.2s linear;
+    margin-top: 4px;
+  }
+
+  .intro-h5 {
+    font-size: clamp(25px, 5vw, 80px);
+  }
+}
+
 /*------------------Intro-------------------*/
 
 /*------------------About Me-------------------*/
@@ -322,7 +350,7 @@ button:active {
 }
 
 .am-h1 {
-  font-size: clamp(30px, 3.5rem, 80px);
+  font-size: clamp(1.9vw, 3.4vw, 5.2vw);
   font-weight: 900;
   position: relative;
   margin-top: 0;
@@ -335,34 +363,48 @@ button:active {
   display: block;
   height: 2px;
   background: var(--color);
-  left: 300px;
+  left: 17.5vw;
   bottom: 50%;
-  width: calc(100% * 2.7);
+  width: 50.5vw;
 }
 @media screen and (max-width: 1364px) {
   .am-container {
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem 5rem 1rem 5rem;
+  }
+
+  .am-h1::after {
+    left: 17.5vw;
+    width: 69vw;
   }
 }
 
 @media screen and (max-width: 1094px) {
   .am-container {
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem 5rem 1rem 5rem;
+  }
+
+  .am-h1 {
+    font-size: clamp(1.9vw, 3.4vw, 5.2vw);
+  }
+
+  .am-h1::after {
+    left: 17.5vw;
+    width: 59vw;
   }
 }
 
-@media screen and (max-width: 768px) and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .am-container {
     margin: 1rem 1rem 1rem 1rem;
   }
 
   .am-h1 {
-    font-size: clamp(30px, 9vw, 80px);
+    font-size: clamp(4.5vw, 6vw, 7.5vw);
   }
 
   .am-h1::after {
-    left: 14.375rem;
-    width: 13.7rem;
+    left: 31vw;
+    width: 59vw;
   }
   .am-paragraph1,
   .am-paragraph2 {
@@ -370,4 +412,10 @@ button:active {
   }
 }
 
+@media screen and (max-width: 412px) {
+  .am-h1::after {
+    left: 13rem;
+    width: 11.3rem;
+  }
+}
 /*------------------About Me-------------------*/
