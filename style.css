@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 /* --------------------Root ELements--------------------  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,8 @@ body {
   width: 100%;
   height: 100%;
   font-size: 15px;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 section {
@@ -19,17 +23,9 @@ section {
   white-space: wrap;
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 :root {
-  --bg-color: #28282B;
-  --color: #FF00FF;
+  --bg-color: #f5f7f8;
+  --color: #45474b;
   --color2: #495e57;
   --highlight: #f4ce14;
 }
@@ -42,10 +38,19 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 6.1vw;
+  padding: 1rem 6vw;
   background-color: var(--color);
-  height: 65px;
+  height: 70px;
 }
+
+.navbar-container li {
+  list-style: none;
+}
+
+.navbar-container a {
+  text-decoration: none;
+}
+
 .hamburger {
   display: none;
 }
@@ -59,14 +64,12 @@ a {
   transition: all 0.3s ease-in-out;
   background-color: var(--bg-color);
 }
+
 .nav-menu {
   display: flex;
-  padding: 0 43px;
+  padding: 0 1vw;
   align-items: start;
-}
-
-.nav-item {
-  margin-left: 1rem;
+  gap: 50px;
 }
 
 .nav-link {
@@ -84,19 +87,22 @@ a {
   font-weight: 500;
   color: var(--bg-color);
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (width <= 768px) {
   .nav-menu {
     position: fixed;
     z-index: 200;
     right: -100%;
-    top: 3.9rem;
+    top: 70px;
     flex-direction: column;
     background-color: var(--color);
     width: 70%;
-    height: 100vh;
+    height: calc(100dvh - 70px);
     text-align: center;
+    justify-content: center;
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    gap: 60px;
   }
 
   .nav-menu.active {
@@ -104,7 +110,8 @@ a {
   }
 
   .nav-item {
-    margin: 2rem 0;
+    margin-left: 40%;
+    margin-bottom: 2px;
   }
 
   .hamburger {
@@ -130,37 +137,37 @@ a {
 #intro {
   background-color: var(--bg-color);
   width: 100%;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 70px);
 }
 
 .intro-wrapper {
   background-color: var(--bg-color);
-  height: calc(100vh - 65px);
+  height: calc(100vh - 70px);
   display: flex;
   color: var(--color);
 }
 
 .intro-container {
-  margin: 5.5vw 25vw 5.5vw 6.1vw;
+  margin: 5.5rem 30rem 5.5rem 10rem;
   padding: 0;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--bg-color);
 }
 
 .intro-paragraph1 {
-  font-size: 1rem;
-  margin: 0 0 1vw 0;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .intro-h1 {
   text-transform: uppercase;
-  font-size: clamp(30px, 8vw, 80px);
+  font-size: clamp(40px, 8vw, 80px);
   font-weight: 900;
   position: relative;
   margin-top: 0;
+  margin-bottom: 15px;
 }
 
 #intro .intro-container .intro-h1::after {
@@ -170,7 +177,7 @@ a {
   left: 0px;
   height: 100%;
   width: 100%;
-  font-size: clamp(30px, 8vw, 80px);
+  font-size: clamp(40px, 8vw, 80px);
   color: transparent;
   -webkit-text-stroke: 0.5px #45474b;
   transform: scale(1);
@@ -180,9 +187,9 @@ a {
 }
 
 .intro-h5 {
-  font-size: clamp(18px, 3vw, 80px);
+  font-size: clamp(25px, 3vw, 55px);
   font-weight: 800;
-  margin: 0 0 20px 0;
+  margin-bottom: 15px;
 }
 .ideas {
   background-image: radial-gradient(circle, #f4ce14, #e3c224, #d3b62e, #c3ab35, #b39f3b);
@@ -192,12 +199,12 @@ a {
 
 .intro-paragraph2 {
   line-height: 2.3rem;
-  margin: 0 0 20px 0;
+  margin-bottom: 15px;
 }
 
 button {
   max-width: 120px;
-  width: 120px;
+  width: 110px;
   height: 50px;
   font-weight: 800;
   border-radius: 8px;
@@ -214,6 +221,7 @@ button {
   position: relative;
   border: 0;
   z-index: 2;
+  margin-bottom: 15px;
 }
 button::after {
   --m-i: linear-gradient(#000, #000);
@@ -258,59 +266,51 @@ button:active {
   --border-width: 5px;
 }
 
-@media screen and (max-width: 1364px) {
+@media screen and (width <= 1368px) {
   .intro-container {
-    margin: 1rem 5rem 1rem 5rem;
+    margin: 5.5rem 10rem 5.5rem 10rem;
   }
 }
 
-@media screen and (max-width: 1094px) {
+@media screen and (width <= 1094px) {
   .intro-container {
-    margin: 1rem 5rem 1rem 5rem;
+    margin: 5.5rem 7rem;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .intro-container {
-    margin: 1rem 1rem 3rem 1rem;
-  }
-
-  .intro-h1 {
-    font-size: clamp(7.5vw, 9vw, 10.5vw);
-  }
-
-  #intro .intro-container .intro-h1::after {
-    font-size: clamp(30px, 9vw, 80px);
-    top: -15px;
-    left: -1px;
-    transition: all 0.2s linear;
-    margin-top: 4px;
-  }
-
-  .intro-h5 {
-    font-size: clamp(25px, 5vw, 80px);
-  }
-}
-
-@media screen and (max-width: 412px) {
+@media screen and (width <= 768px) {
   .intro-container {
     margin: 1rem 1rem 1rem 1rem;
+    height: 100vh;
   }
 
-  .intro-h1 {
-    font-size: clamp(7.5vw, 9vw, 10.5vw);
+  #intro {
+    height: 100vh;
   }
 
-  #intro .intro-container .intro-h1::after {
-    font-size: clamp(30px, 9vw, 80px);
-    top: -15px;
-    left: -1px;
-    transition: all 0.2s linear;
-    margin-top: 4px;
+  .intro-paragraph1 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
   }
 
-  .intro-h5 {
-    font-size: clamp(25px, 5vw, 80px);
+  .intro-paragraph2 {
+    line-height: 2.8rem;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (width <= 412px) {
+  .intro-container {
+    margin: 1rem 1.5rem 5rem 1.5rem;
+  }
+
+  button {
+    width: 100px;
+    height: 51px;
+  }
+
+  .intro-paragraph2 {
+    line-height: 2.5rem;
   }
 }
 
@@ -321,7 +321,7 @@ button:active {
 #about-me {
   background-color: var(--bg-color);
   width: 100%;
-  height: 92vh;
+  height: 100vh;
 }
 
 .am-wrapper {
@@ -334,9 +334,9 @@ button:active {
 .am-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
-  margin: 9rem 25rem 9rem 6rem;
+  margin: 5.5rem 30rem 5.5rem 10rem;
   padding: 0%;
   position: relative;
 }
@@ -344,17 +344,17 @@ button:active {
 .am-paragraph1,
 .am-paragraph2 {
   font-size: 1rem;
-  margin: 0 0 20px 0;
   line-height: 2.3rem;
   margin: 20px 0;
 }
 
 .am-h1 {
-  font-size: clamp(1.9vw, 3.4vw, 5.2vw);
-  font-weight: 900;
+  font-size: clamp(25px, 3vw, 55px);
+  font-weight: 800;
   position: relative;
   margin-top: 0;
   margin-bottom: 20px;
+  display: block;
 }
 
 .am-h1::after {
@@ -363,59 +363,45 @@ button:active {
   display: block;
   height: 2px;
   background: var(--color);
-  left: 17.5vw;
+  left: 17vw;
   bottom: 50%;
   width: 50.5vw;
 }
-@media screen and (max-width: 1364px) {
+@media screen and (width <= 1364px) {
   .am-container {
-    margin: 1rem 5rem 1rem 5rem;
+    margin: 5.5rem 10rem 5.5rem 10rem;
   }
 
-  .am-h1::after {
+  /* .am-h1::after {
     left: 17.5vw;
     width: 69vw;
-  }
+  } */
 }
 
-@media screen and (max-width: 1094px) {
+@media screen and (width <= 1094px) {
   .am-container {
-    margin: 1rem 5rem 1rem 5rem;
-  }
-
-  .am-h1 {
-    font-size: clamp(1.9vw, 3.4vw, 5.2vw);
-  }
-
-  .am-h1::after {
-    left: 17.5vw;
-    width: 59vw;
+    margin: 5.5rem 7rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .am-container {
     margin: 1rem 1rem 1rem 1rem;
   }
-
-  .am-h1 {
-    font-size: clamp(4.5vw, 6vw, 7.5vw);
-  }
-
   .am-h1::after {
-    left: 31vw;
-    width: 59vw;
-  }
-  .am-paragraph1,
-  .am-paragraph2 {
-    margin-top: 1rem;
+    left: 27vw;
+    width: 63vw;
   }
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (width <= 412px) {
+  .am-container {
+    margin: 1rem 1.5rem 5rem 1.5rem;
+  }
   .am-h1::after {
-    left: 13rem;
-    width: 11.3rem;
+    left: 38vw;
+    width: 48vw;
   }
 }
+
 /*------------------About Me-------------------*/
