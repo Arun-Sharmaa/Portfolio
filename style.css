@@ -1,4 +1,4 @@
-/* --------------------Root ELements--------------------  */
+8/* --------------------Root ELements--------------------  */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
@@ -281,11 +281,11 @@ button:active {
 @media screen and (width <= 768px) {
   .intro-container {
     margin: 1rem 1rem 1rem 1rem;
-    height: 100dvh;
+    height: 100%;
   }
 
   #intro {
-    height: 100dvh;
+    height: 100%;
   }
 
   .intro-paragraph1 {
